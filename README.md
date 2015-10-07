@@ -34,7 +34,7 @@ mkdir build
 cd build
 cmake ..
 make
-./cppstarter
+make test
 ```
 
 ### Requirements

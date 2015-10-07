@@ -5,6 +5,15 @@ set (PROJECT_NAME cpptemplate)
 
 project(${PROJECT_NAME})
 
+message(STATUS "")
+message(STATUS "-----------------------------------------------------------")
+message(STATUS "Project ${PROJECT_NAME}")
+message(STATUS "-----------------------------------------------------------")
+message(STATUS "")
+
+# This statement enables testing (e.g. make test)
+enable_testing()
+
 # This will build the GoogleTest suite as a static library
 add_subdirectory(contrib)
 
@@ -18,6 +27,11 @@ include_directories(
 # This is one example file to start with the new project
 set(SOURCE_FILES test/TestStarter.cpp)
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+add_executable(test_${PROJECT_NAME} ${SOURCE_FILES})
 
-target_link_libraries(${PROJECT_NAME} gtest_main pthread)
+target_link_libraries(test_${PROJECT_NAME} gtest_main pthread)
+
+add_test(
+    NAME test_${PROJECT_NAME}
+    COMMAND test_${PROJECT_NAME}
+    )
