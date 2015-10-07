@@ -7,12 +7,12 @@ Template for starting a new C++ project using CMake and GoogleTest.
 1. Automatic setup procedure
 
 ```
-git clone REPO_URL --recursive
+git clone https://github.com/breiting/cppstarter.git --recursive
 ```
 
 2. Manual setup procedure
 
 ```
-git clone REPO_URL
+git clone https://github.com/breiting/cppstarter.git
 git submodule update --init --recursive  
 ```
