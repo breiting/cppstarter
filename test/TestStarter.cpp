@@ -1,10 +1,12 @@
 #include <iostream>
 
 #include <gtest/gtest.h>
+#include "Class.hpp"
 
 // This is a test stub for your first unit test
-TEST(FirstTest, Test)
+TEST(TestClass, TestInit)
 {
-    // This let us pass the first test
-    ASSERT_EQ(1, 1);
+    Class a;
+
+    EXPECT_EQ(a.init(), false);
 }

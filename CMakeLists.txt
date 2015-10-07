@@ -21,11 +21,12 @@ add_subdirectory(contrib)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 include_directories(
-"${PROJECT_SOURCE_DIR}/contrib/gtest/include"
+        "${PROJECT_SOURCE_DIR}/contrib/gtest/include"
+        ./include
 )
 
 # This is one example file to start with the new project
-set(SOURCE_FILES test/TestStarter.cpp)
+set(SOURCE_FILES test/TestStarter.cpp src/Class.cpp include/Class.hpp)
 
 add_executable(test_${PROJECT_NAME} ${SOURCE_FILES})
 
